@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first panier Inchaa'Allah</title>
+    <link rel="stylesheet" href="first_panier.css">
+    <link rel="stylesheet" href="panier.css">
+</head>
+<body>
+    <header class="header_tete">
+        <img src="image/logo1.jpeg" alt="" width="150" height="80">
+        <nav class="nav_barre">
+            <a href="">Accueil</a>
+            <a href="">Produits</a>
+            <a href="">Contact</a>
+        </nav>
+        <div>
+            <button href="" class="btn_voir_panier">🛒<span class="compteur_produit_panier">0</span></button> 
+            <button class="btn_voir_login">Login</button>
+        </div>
+        <button class="btn_navbarre hidden">&#9776</button>
+    </header>
+    <main>
+        <section class="accueil">
+            <h1 class="observateur1">AIR <span>JORDAN </span>IV</h1>
+            <p>Decouvrez notre nouvelle collection de chaussures <br>
+              Nombre de pièce limité</p>
+            <a href="" class="btn">Commender maintenant</a>
+        </section>
+        <!-- section login, page qui permet l'administrateur de se connecter sur son compte -->
+        <section class="login hidden">
+            <form action="" class="formulair_login" >
+                <h1>Welcom Back</h1>
+                <h3>Nom</h3>
+                <input type="text" placeholder="Entrez votre nom :" class="login_nom" required>
+                <h3>Email</h3>
+                <input type="email" placeholder="entrez votre email :" class="login_email" required> <br>
+                <p> 
+                    <button type="button" class="login_retour">❌</button>
+                    <button type="submit" class="login_connecter">Se connecter</button>
+                </p>
+            </form>
+        </section>
+<!-- section administrateur -->
+        <section class="administrateur hidden">
+            <div class="tete_administrateur">
+                <button class="btn_deconnexion_admin">Déconnexion</button>
+                <h1>Administrateur :<span class="nom_administrateur"> <i>Oumar Diallo</i> </span></h1>
+                <button class="btn_ajouter_produit">Ajouter</button>
+            </div>
+<!-- corps de la section administrateur -->
+            <div class="corps_administrateur">
+                <div class="produit_ajouter_administrateur" data-id="1">
+                    <img src="image/fond_rouge.jpeg" alt="image ajouter par administrateur" width="200">
+                    <div class="pro_admin_nom_prix_quantite_bouton">
+                        <h2>Air Jordan 4</h2>
+                        <p>prix du <span>100 </span>$</p>
+                        <p>Quantité : <span>100</span> pièces</p>
+                        <p class="bouton_supprimer_modifier">
+                            <button class="btn_supprimer_produit_admin">Supprimer</button>
+                            <button class="btn_modifier_produit_admin">modifier</button>
+                        </p>
+                    </div>
+                </div>
+                <div class="produit_ajouter_administrateur" data-id="2">
+                    <img src="image/fond_rouge2.jpeg" alt="image ajouter par administrateur" width="200">
+                    <div class="pro_admin_nom_prix_quantite_bouton">
+                        <h2>Air Jordan 4</h2>
+                        <p>prix du <span>200 </span>$</p>
+                        <p>Quantité : <span>100</span> pièces</p>
+                        <p class="bouton_supprimer_modifier">
+                            <button class="btn_supprimer_produit_admin">Supprimer</button>
+                            <button class="btn_modifier_produit_admin">modifier</button>
+                        </p>
+                    </div>
+                </div>
+                <div class="produit_ajouter_administrateur" data-id="3">
+                    <img src="image/fond_blanc2.jpeg" alt="image ajouter par administrateur" width="200">
+                    <div class="pro_admin_nom_prix_quantite_bouton">
+                        <h2>Air Jordan 4</h2>
+                        <p>prix du <span>300 </span>$</p>
+                        <p>Quantité : <span>100</span> pièces</p>
+                        <p class="bouton_supprimer_modifier">
+                            <button class="btn_supprimer_produit_admin">Supprimer</button>
+                            <button class="btn_modifier_produit_admin">modifier</button>
+                        </p>
+                    </div>
+                </div>
+                <div class="produit_ajouter_administrateur" data-id="4">
+                    <img src="image/fond_blanc.jpeg" alt="image ajouter par administrateur" width="200">
+                    <div class="pro_admin_nom_prix_quantite_bouton">
+                        <h2>Air Jordan 4</h2>
+                        <p>prix du <span>400 </span>$</p>
+                        <p>Quantité : <span>100</span> pièces</p>
+                        <p class="bouton_supprimer_modifier">
+                            <button class="btn_supprimer_produit_admin">Supprimer</button>
+                            <button class="btn_modifier_produit_admin">modifier</button>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+<!-- pied de la section administrateur -->
+            <div class="pied_administrateur">
+                <h3>La somme total est : <span class="somme_total_admin"></span> $</h3>
+            </div>
+        </section>
+<!-- fin section administrateur -->
+
+
+<!-- section produit visible pour le clien -->
+        <section class="section_produits">
+            <h2 class="observateur1">Nos Produits</h2>
+            <h3>Découvrez nos dernières nouveautés</h3>
+            <hr class="hr1">
+            <div class="produits_details container_produits">
+                <div class="produit" data-id="1">
+                    <img src="image/fond_rouge.jpeg" alt="" width="200">
+                    <h4>Air Jordan 4</h4>
+                    <p>Prix: <span>100 €</span></p>
+                    <button class="btn_ajouter_panier">Ajouter au panier</button>
+                </div>
+                <div class="produit"  data-id="2">
+                    <img src="image/fond_rouge2.jpeg" alt="" width="200">
+                    <h4>Air Jordan 4</h4>
+                    <p>Prix: <span>200 €</span></p>
+                    <button class="btn_ajouter_panier">Ajouter au panier</button>
+                </div>
+                <div class="produit"  data-id="3">
+                    <img src="image/fond_blanc2.jpeg" alt="" width="200">
+                    <h4>Air Jordan 4</h4>
+                    <p>Prix: <span>300 €</span></p>
+                    <button class="btn_ajouter_panier">Ajouter au panier</button>
+                </div>
+                <div class="produit"  data-id="4">
+                    <img src="image/fond_blanc.jpeg" alt="" width="200">
+                    <h4>Air Jordan 4</h4>
+                    <p>Prix: <span>400 €</span></p>
+                    <button class="btn_ajouter_panier">Ajouter au panier</button>
+                </div>
+            </div>
+
+        </section>
+<!-- section panier -->
+        <section class="panier hidden">
+            <div class="tete_panier">
+                <button class="btn_masquer_panier">Home</button>
+                <h1>Mon Panier : 🛒 <span class="compteur_produit_panier">0</span></h1>
+                <button class="btn_vider_panier">Vider le panier</button>
+            </div>
+            <div class="container_panier">
+                
+            </div>
+            <div class="pieds_panier">
+                <h2>le Total est: <span class="somme_total_panier">0 </span> €</h2>
+                
+            </div>
+                
+        </section>
+        <!-- formulaire pour ajouter un porduit -->
+        <section class="formulaire_ajouter_produit hidden">
+                <h2>Ajouter un produit</h2>
+                <div class="div_image_choisie"> <h1>Choisir une image</h1></div>
+                <form action="">
+                    <input type="file" class="inputfile hidden">
+                    <input type="text" placeholder="Nom du produit" class="nom_du_produit">
+                    <input type="number" placeholder="Prix du produit" class="prix_du_produit">
+                    <input type="number" placeholder="Quantité du produit" class="quantite_du_produit">
+                    <button class="btn_annuler_ajouter">❌</button>
+                    <button type="submit" class="btn_ajouter">Ajouter</button>
+                </form>
+        </section>
+        <!-- formulaire pour modifier un porduit -->
+         <section class="formulaire_modifier_produit hidden">
+                <h2>Modifier un produit</h2>
+                <div class="div_image_choisie_modifier"> <h1>Choisir une image</h1></div>
+                <form action="">
+                    <input type="file" class="base64Image_modiant hidden">
+                    <input type="text" placeholder="Nom du produit" class="nom_du_produit_modifier">
+                    <input type="number" placeholder="Prix du produit" class="prix_du_produit_modifier">
+                    <input type="number" placeholder="Quantité du produit" class="quantite_du_produit_modifier">
+                    <button class="btn_annuler_modifier">❌</button>
+                    <button type="submit" class="btn_enregister">Enregistrer</button>
+                </form>
+        </section>
+        <!-- moyenne de contact -->
+        <section class="contact">
+            <h2>Contact</h2>
+            <p>Pour plus d'informations, n'hésitez pas à nous contacter.</p>
+            <form action="">
+                <h2>Envoyez-nous un message</h2>
+                <h3>Nom</h3>
+                <input type="text" placeholder="Votre nom" class="champ_nom">
+                <h3>Email</h3>
+                <input type="email" placeholder="Votre email" class="champ_email">
+                <h3>Message</h3>
+                <textarea placeholder="Votre message" class="champ_message"></textarea>
+                <button type="submit" class="btn_envoyer_message">Envoyer</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>@2026 Crée avec passion par <span>Oumar Diallo</span> dévéloppeur web. </p>
+    </footer>
+
+
+
+
+    <script src="first_panier.js"></script>
+</body>
+</html>
