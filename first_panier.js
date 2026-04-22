@@ -506,9 +506,9 @@ const observateur1=new IntersectionObserver(entrys=>{
         if (entry.isIntersecting){
             entry.target.classList.add("show1");
         }
-        else{
-            entry.target.classList.remove("show1");
-        }
+        // else{
+        //     entry.target.classList.remove("show1");
+        // }
     })
 })
 const elements_observateur1=document.querySelectorAll(".observateur1");
