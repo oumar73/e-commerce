@@ -12,9 +12,9 @@
     <header class="header_tete">
         <img src="image/logo1.jpeg" alt="" width="150" height="80">
         <nav class="nav_barre">
-            <a href="">Accueil</a>
-            <a href="">Produits</a>
-            <a href="">Contact</a>
+            <a href="#accueil">Accueil</a>
+            <a href="#section_produits">Produits</a>
+            <a href="#contact">Contact</a>
         </nav>
         <div>
             <button href="" class="btn_voir_panier">🛒<span class="compteur_produit_panier">0</span></button> 
@@ -23,7 +23,7 @@
         <button class="btn_navbarre hidden">&#9776</button>
     </header>
     <main>
-        <section class="accueil">
+        <section class="accueil" id="accueil">
             <h1 class="observateur1">AIR <span>JORDAN </span>IV</h1>
             <p>Decouvrez notre nouvelle collection de chaussures <br>
               Nombre de pièce limité</p>
@@ -47,7 +47,7 @@
         <section class="administrateur hidden">
             <div class="tete_administrateur">
                 <button class="btn_deconnexion_admin">Déconnexion</button>
-                <h1>Administrateur :<span class="nom_administrateur"> <i>Oumar Diallo</i> </span></h1>
+                <h1>Admin :<span class="nom_administrateur"> <i>Oumar Diallo</i> </span></h1>
                 <button class="btn_ajouter_produit">Ajouter</button>
             </div>
 <!-- corps de la section administrateur -->
@@ -111,7 +111,7 @@
 
 
 <!-- section produit visible pour le clien -->
-        <section class="section_produits">
+        <section class="section_produits" id="section_produits">
             <h2 class="observateur1">Nos Produits</h2>
             <h3>Découvrez nos dernières nouveautés</h3>
             <hr class="hr1">
@@ -186,7 +186,7 @@
                 </form>
         </section>
         <!-- moyenne de contact -->
-        <section class="contact">
+        <section class="contact" id="contact">
             <h2>Contact</h2>
             <p>Pour plus d'informations, n'hésitez pas à nous contacter.</p>
             <form action="">
@@ -203,6 +203,7 @@
     </main>
     <footer>
         <p>@2026 Crée avec passion par <span>Oumar Diallo</span> dévéloppeur web. </p>
+        <button class="btn_remonter hidden">↑</button>
     </footer>
 
 

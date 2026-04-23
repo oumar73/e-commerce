@@ -527,3 +527,20 @@ window.addEventListener("scroll",()=>{
     }
     dernier_scroll=window.scrollY;
 })
+// bouton pour remonter en haut
+const btn_remonter=document.querySelector(".btn_remonter");
+console.log(btn_remonter);
+window.addEventListener("scroll",()=>{
+    if(window.scrollY>200){
+        btn_remonter.classList.remove("hidden");
+    }
+    else{
+        btn_remonter.classList.add("hidden");
+    }
+})
+btn_remonter.addEventListener("click",()=>{
+   window.scrollTo({
+        top:0,
+        behavior:"smooth"
+   })
+})
