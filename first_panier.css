@@ -122,6 +122,15 @@ main .accueil p{
     color: rgb(204, 183, 183);
     /* margin-top: 100px; */
     /* border: 1px red solid; */
+    animation: animation_accueilP 2s 1s both;
+}
+@keyframes animation_accueilP {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 main .accueil a{
     /* border: 1px solid red; */
@@ -137,7 +146,31 @@ main .accueil a{
     font-size: 1.2rem;
     margin-top: 100px;
     box-shadow: 0 0 5px red;
-    animation: animation_accueil_a 1.4s ease-in-out infinite alternate ;
+    animation: 
+        animation_accueilA 3s 1.5s both,
+        animation_accueil_a 1.4s 4.5s ease-in-out infinite alternate ;
+    /* animation: animation_accueilA 3s 1.5s both ; */
+}
+@keyframes animation_accueilA {
+    from{
+        opacity: 0;
+        transform: translateX(-310px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes animation_accueil_a {
+    0%{
+        transform: scale(1) ;
+    }
+    50%{
+        transform: scale(1.03);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 /* fin de la section accueil */
 /* debut de la section administrateur */
@@ -268,6 +301,7 @@ main .accueil a{
     right: 0;
     left: 0;
     bottom: 0;
+    z-index: 150;
 }
 .login form{
     /* height: 50%; */
@@ -451,6 +485,7 @@ main .accueil a{
     justify-content: center;
     align-items: center;
     height: 300px;
+    /* max-width: 300px; */
     width: 94%;
     margin: auto;
     border-radius: var(--bd_radius);
@@ -601,17 +636,6 @@ footer p span{
     color: red;
     font-weight: bold;
 }
-@keyframes animation_accueil_a {
-    0%{
-        transform: scale(1);
-    }
-    50%{
-        transform: scale(1.03);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
 /* le panier */
 .panier{
     /* border: 1px solid red; */
@@ -624,6 +648,7 @@ footer p span{
     bottom: 0;
     background: hsl(0, 0%, 7%);
     color: gray;
+    z-index: 200;
 }
 .tete_panier{
     /* border: 1px solid red; */
@@ -810,17 +835,27 @@ button:hover{
 
 }
 /* animation au scroll */
-/* .observateur1{
-    opacity: 0;
-    transform: translateY(-20px);
-} */
+
 .show1{
     animation: animation_scroll1 1s  ease-in-out both;
 }
 @keyframes animation_scroll1 {
     0%{
-    opacity: 0;
-    transform: translateY(20px);
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.show2{
+    animation: animation_scroll1 1.5s  ease-in-out both ;
+}
+@keyframes animation_scroll2 {
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
     }
     100%{
         opacity: 1;
@@ -840,6 +875,7 @@ button:hover{
     background:radial-gradient(circle, red, black);
     border-color: rgb(2, 0, 0);
     animation: btn_remonter 3s infinite ease-in-out;
+    box-shadow: 0 0 2px red;
 }
 @keyframes btn_remonter {
     from{
@@ -1042,7 +1078,7 @@ button:hover{
     }
     /* formulair d'ajout d'un produit */
     .formulaire_ajouter_produit,.formulaire_modifier_produit{
-        max-height: 75%;
+        max-height: 100vh;
         width: 90%;
     }
     

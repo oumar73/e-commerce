@@ -32,6 +32,8 @@ const section_admin=document.querySelector(".administrateur");
 const btn_deconnexion_admin=document.querySelector(".btn_deconnexion_admin");
 btn_deconnexion_admin.addEventListener("click",()=>{
     section_admin.classList.add("hidden");
+    formulaire_ajouter_produit.classList.add("hidden");
+    formulaire_modifier_produit.classList.add("hidden");
 })
 // le bouton qui permet supprimer un porduit dans le container de l'admininitrateur
 const btn_supprimer_produit_admin=document.querySelector(".btn_supprimer_produit_admin");
@@ -147,6 +149,7 @@ function ajout_produit_administrateur(produit){
 // fonction qui va créer un produit et l'ajouter dans le container des produits dans la page d'accueil du site
 function afficher_produit(produit){
     const produit_ajouter = document.createElement("div");
+    // produit_ajouter.className="observateur2";
     produit_ajouter.classList.add("produit");
     produit_ajouter.dataset.id = produit.id;
     produit_ajouter.innerHTML = `
@@ -544,3 +547,15 @@ btn_remonter.addEventListener("click",()=>{
         behavior:"smooth"
    })
 })
+const observateur2= new IntersectionObserver(entrys =>{
+    entrys.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show2")
+        }
+        // else{
+        //     entry.target.classList.remove("show2")
+        // }
+    })
+})
+const element_observateur2=document.querySelectorAll(".observateur2");
+element_observateur2.forEach(el => observateur2.observe(el));
