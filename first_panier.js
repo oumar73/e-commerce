@@ -367,7 +367,13 @@ container_panier.addEventListener("click",(e)=>{
         // suppression dans le dom
         produit_touched.remove();
         // compteur du panier
-        compteur_produit_panier.forEach(el => el.textContent=liste_produit_panier.length);  
+        compteur_produit_panier.forEach(el => el.textContent=liste_produit_panier.length);
+        // recalculer la valeur du panier
+        valeur_total_panier=0;
+        for( let i of liste_produit_panier){
+            valeur_total_panier+=i.quantite_produit*i.prix_produit;
+        }
+        somme_total_panier.textContent=valeur_total_panier;  
     }
 })
 // programme du bouton qui permet de voir le panier

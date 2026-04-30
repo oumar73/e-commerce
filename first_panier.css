@@ -1076,10 +1076,16 @@ button:hover{
         min-width: 300px;
         height: 500px;
     }
+    .section_produits h2{
+        font-size: 1.3rem;
+    }
     /* formulair d'ajout d'un produit */
     .formulaire_ajouter_produit,.formulaire_modifier_produit{
         max-height: 100vh;
         width: 90%;
     }
-    
+    .btn_remonter{
+    height: 50px;
+    width: 50px;
+    }
 }
